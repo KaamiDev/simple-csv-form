@@ -1,7 +1,6 @@
 // import modules
 const express = require('express');
 const ObjectsToCsv = require('objects-to-csv');
-const csv = require('objects-to-csv');
 
 // initialize app
 const app = express();
