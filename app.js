@@ -1,5 +1,6 @@
 // import modules
 const express = require('express');
+const ObjectsToCsv = require('objects-to-csv');
 const csv = require('objects-to-csv');
 
 // initialize app
@@ -18,7 +19,21 @@ app.get('/', (req, res) => {
 });
 
 app.post('/submit', (req, res) => {
-	// to thing
+	if (req.body.name && req.body.surname && req.body.email) {
+		let data = [
+			{
+				name: req.body.name,
+				surname: req.body.surname,
+				email: req.body.email
+			}
+		];
+
+		new ObjectsToCsv(data).toDisk('./data.csv', {
+			append: true
+		});
+	} else {
+		res.redirect('back');
+	}
 });
 
 // listen to port
