@@ -14,6 +14,7 @@ app.use(express.json());
 
 // setup routes
 app.get('/', (req, res) => {
+	res.render('index.ejs');
 	// do thing
 });
 

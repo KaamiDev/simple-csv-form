@@ -1,0 +1,26 @@
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+
+    h1 {
+        margin-top: 50px;
+    }
+    input {
+        width: 300px;
+        padding: 5px 10px;
+        font-size: 15px;
+        display: block;
+        margin: 10px auto;
+    }
+</style>
+
+<h1>Form Title</h1>
+
+<form method="POST" action="/submit">
+    <input required name="name" placeholder="Name">
+    <input required name="surname" placeholder="Surname">
+    <input required name="email" placeholder="Email">
+    <input type="submit">
+</form>
