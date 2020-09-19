@@ -14,9 +14,16 @@
         display: block;
         margin: 10px auto;
     }
+    p {
+        color: green;
+    }
 </style>
 
 <h1>Form Title</h1>
+
+<% if(status === 'submitted') { %>
+    <p>Successfully submitted!</p>
+<% } %>
 
 <form method="POST" action="/submit">
     <input required name="name" placeholder="Name">
