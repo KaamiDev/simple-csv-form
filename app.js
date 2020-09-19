@@ -31,6 +31,8 @@ app.post('/submit', (req, res) => {
 		new ObjectsToCsv(data).toDisk('./data.csv', {
 			append: true
 		});
+
+		res.redirect('/?status=submitted');
 	} else {
 		res.redirect('back');
 	}
